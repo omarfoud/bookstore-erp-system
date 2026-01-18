@@ -83,6 +83,27 @@ npm start
 - MySQL Server
 - Git
 
+### إعداد قاعدة البيانات (Database Setup)
+
+يحتوي المشروع على ملف `bookstore_erp.sql` في مجلد `backend/` الذي يحتوي على:
+- هيكل قاعدة البيانات الكامل
+- الجداول اللازمة لجميع الوحدات (الموظفين، المخزون، المبيعات، الحضور، إلخ)
+- بيانات تجريبية للاختبار
+
+**لاستيراد قاعدة البيانات:**
+```sql
+-- استيراد الملف في MySQL
+mysql -u username -p bookstore_erp < backend/bookstore_erp.sql
+```
+
+**الجداول الرئيسية:**
+- `users` - بيانات المستخدمين
+- `employees` - معلومات الموظفين
+- `attendance` - سجل الحضور والغياب
+- `products` - منتجات المخزون
+- `orders` - طلبات المبيعات
+- `finance_records` - السجلات المالية
+
 ---
 
 ## مقدمة للمعيدة (Introduction for Instructor)
